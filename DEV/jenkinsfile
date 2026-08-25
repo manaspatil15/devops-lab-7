@@ -14,9 +14,7 @@ pipeline {
    stage('Build') {
     steps {
         echo 'Building project'
-        dir('DEV') {
-            bat 'mvn -f DEV/pom.xml clean compile'
-        }
+          bat 'mvn -f DEV/pom.xml clean compile'
     }
 }
         stage('Run Selenium Tests') {
